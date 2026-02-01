@@ -240,3 +240,19 @@ function setupMusicPlayer() {
         }
     });
 } 
+
+
+// Mobile first-touch autoplay workaround
+let musicUnlocked = false;
+
+document.body.addEventListener('click', () => {
+    if (musicUnlocked) return;
+
+    const bgMusic = document.getElementById('bgMusic');
+    const musicToggle = document.getElementById('musicToggle');
+
+    bgMusic.play().then(() => {
+        musicUnlocked = true;
+        musicToggle.textContent = config.music.stopText;
+    }).catch(() => {});
+});
