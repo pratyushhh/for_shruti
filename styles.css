@@ -353,3 +353,38 @@ h2 {
         height: 140px;
     }
 }
+
+
+.photo-wrapper {
+    position: relative;
+}
+
+.mini-heart {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: mini-float 4s infinite ease-in;
+    font-size: 18px;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.mini-heart.delay {
+    animation-delay: 2s;
+    left: 30%;
+}
+
+@keyframes mini-float {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 0) scale(0.8);
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -60px) scale(1.2);
+    }
+}
