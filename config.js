@@ -22,13 +22,13 @@ const CONFIG = {
     // Customize each question and its possible responses
     questions: {
         first: {
-            text: "Do you like Pratyush??",                                    // First interaction
+            text: "This is Pratyush. Do you like Me??",                                    // First interaction
             yesBtn: "yep",                                             // Text for "Yes" button
             noBtn: "no",                                               // Text for "No" button
-            secretAnswer: "I don't like him, I lovee him! ❤️"           // Secret hover message
+            secretAnswer: "I don't like you, I lovee you! ❤️"           // Secret hover message
         },
         second: {
-            text: "How much do you love him?",                          // For the love meter
+            text: "How much do you love Pratyush?",                          // For the love meter
             startText: "This much!",                                   // Text before the percentage
             nextBtn: "Next ❤️"                                         // Text for the next button
         },
