@@ -316,3 +316,40 @@ h2 {
     transform: scale(1.05);
     background: var(--secondary-color);
 } 
+
+.photo-pair {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.photo {
+    width: 130px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 6px solid white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.photo.left {
+    transform: rotate(-6deg);
+}
+
+.photo.right {
+    transform: rotate(6deg);
+}
+
+.photo:hover {
+    transform: scale(1.05);
+}
+
+/* Mobile adjustment */
+@media (max-width: 480px) {
+    .photo {
+        width: 110px;
+        height: 140px;
+    }
+}
